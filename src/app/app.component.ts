@@ -21,15 +21,16 @@ export class AppComponent implements OnInit {
 
       console.log(this.adalService.userInfo.token);
 
-      this.adalService.acquireToken("f4df9e4e-5b02-41c8-888b-3eacb40773ff").subscribe(
+      this.adalService.acquireToken("0fcb057e-eef3-4b72-994d-d0e0cf5cd5d7").subscribe(
         data => {
 
           console.log(data);
 
           const authToken = 'Bearer ' + data;
           const headers = new HttpHeaders().set('Authorization', authToken);
+          //headers.append("Access-Control-Allow-Origin", "http://localhost:4200");
 
-          this.http.get<any>('https://localhost:44381/api/values/1', {
+          this.http.get<any>('https://localhost:5001/api/values', {
             headers: headers
           }).subscribe(
             data => {

@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   adalConfig: {
-    tenant: 'aniketrai2mindtree.onmicrosoft.com',
-    clientId: 'dc2585fe-9142-4715-b3f6-7ce5bdb2eaf0',
+    tenant: 'rydertruck.onmicrosoft.com',
+    clientId: '0fcb057e-eef3-4b72-994d-d0e0cf5cd5d7',
     postLogoutRedirectUri: 'http://localhost:4200',
     cacheLocation: 'localStorage'
   }
